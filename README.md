@@ -1,16 +1,13 @@
 # ai_dreams
 
-A new Flutter project.
+A  Flutter project that allows for the (mobile) generation of StableDiffusion images using text-to-image and text-to-text models.
 
-## Getting Started
+# Overview
 
-This project is a starting point for a Flutter application.
+# Developmnt
 
-A few resources to get you started if this is your first Flutter project:
+# Architecture
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+# License
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This applicationis considered proprietary and as such no license is granted for the use, re-use, copying or (re-)distribution of this source code or the compiled application. All code and applications are soley owned by Sotek LLC.

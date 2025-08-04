@@ -1,4 +1,4 @@
-package com.example.ai_dreams
+package com.sotek.ai_dreams
 
 import io.flutter.embedding.android.FlutterActivity
 

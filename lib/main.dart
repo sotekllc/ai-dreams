@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-// import 'package:flutter/material.dart';
 
 import 'package:ai_dreams/predictions/page.dart';
 import 'package:ai_dreams/user/settings_page.dart';
