@@ -1,13 +1,13 @@
 import 'package:flutter/cupertino.dart';
 
-class PredictionsPage extends StatefulWidget {
-  const PredictionsPage({Key? key}) : super(key: key);
+class GenerationScreen extends StatefulWidget {
+  const GenerationScreen({Key? key}) : super(key: key);
 
   @override
-  _PredictionsPageState createState() => _PredictionsPageState();
+  _GenerationScreenState createState() => _GenerationScreenState();
 }
 
-class _PredictionsPageState extends State<PredictionsPage> {
+class _GenerationScreenState extends State<GenerationScreen> {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(

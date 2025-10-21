@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
-import 'package:ai_dreams/predictions/page.dart';
+import 'package:ai_dreams/generation/screen.dart';
 import 'package:ai_dreams/user/settings_page.dart';
 
 void main() {
@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
         ),
         tabBuilder: (BuildContext context, int index) {
           return const <Widget>[
-            PredictionsPage(),
+            GenerationScreen(),
             // LibraryPage(),
             SettingsPage(),
           ][index];
