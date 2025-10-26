@@ -1,9 +1,14 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 import 'package:ai_dreams/generation/screen.dart';
 import 'package:ai_dreams/user/settings_page.dart';
+import 'package:ai_dreams/bootstrap.dart';
 
 void main() {
+  BootstrapService.loadEnv();
+  // DotEnv().env['googleAppID']
+
   runApp(const MyApp());
 }
 
