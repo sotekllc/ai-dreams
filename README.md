@@ -1,4 +1,4 @@
-# ai_dreams
+# ai_dreams (IN_PROGRESS)
 
 A  Flutter project that allows for the (mobile) generation of StableDiffusion images using text-to-image and text-to-text models.
 
