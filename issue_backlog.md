@@ -4,6 +4,16 @@ A list of prioritized user stories and issues that, after being completed, compr
 
 - Tab Navigation
     User can navigte between version 1 primary screens using bottom tabs, Predictions and Settings.
+- Backend Services Setup w/ DotEnv for Loading Secrets as Env Vars
+    Env Vars will become remotely loaded secrets later on after developing the frontend prototype,
+    except for JSON files (if we use Firebase) which will be loaded remotely or manually but not included with the source code.
+    Select a backend choice: AWS, Firebase or Supabase; document the choice in an ADR.
+    Setup Replicate and the initial prototype models, and store model information for the Generate page in the backend storage.
+    Create the cloud function for loading the possible models for generation that reads from backend storage (don't directly access backend storage, use cloud functions!).
+    Establish models/values for model information and load this data into the application.
+
+    Users can view at least (4) models on the Generate page at the top of the screen and can select which model to run generations with.
+    Users can click "generate prompt" and load a randomly generated prompt into the prompt form field using a text-to-text LLM generation.
 - Predictions (Generations) Screen 
     User can select which (Stable Diffusion) model type to use for generations at the top of the Predictions Screen.
         Some models are restricted to subscribed users.
