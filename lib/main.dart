@@ -1,33 +1,42 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:localstorage/localstorage.dart';
+import 'package:provider/provider.dart';
 
 import 'package:ai_dreams/generation/screen.dart';
-import 'package:ai_dreams/user/settings_page.dart';
+import 'package:ai_dreams/user/settings_screen.dart';
 import 'package:ai_dreams/bootstrap.dart';
+import 'package:ai_dreams/theme.dart';
+import 'package:ai_dreams/theme_provider.dart';
 
-void main() {
+void main() async {
   BootstrapService.loadEnv();
   // DotEnv().env['googleAppID']
+  WidgetsFlutterBinding.ensureInitialized();
+  await initLocalStorage();
 
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (_) => ThemeProvider(storage: localStorage),
+        ),
+      ],
+      child: AiDreamsApp(),
+    ),
+  );
+  // runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class AiDreamsApp extends StatelessWidget {
+  const AiDreamsApp({super.key});
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return CupertinoApp(
       title: 'AI Dreams',
-      theme: CupertinoThemeData(
-        brightness: Brightness.light,
-        primaryColor: CupertinoColors.systemBlue,
-      ),
-      // theme: ThemeData(
-      //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      // ),
-
+      theme: lightTheme,
       // NOTE: FutureBuilder ST 3 tabs for logged in users, 2 for free/adds users.
       home: CupertinoTabScaffold(
         tabBar: CupertinoTabBar(
@@ -51,7 +60,6 @@ class MyApp extends StatelessWidget {
           ][index];
         },
       ),
-      // home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
