@@ -68,13 +68,13 @@ const subtitleStyle = TextStyle(
 );
 
 final errorTextStyle = TextStyle(
-  color: Colors.red,
+  color: CupertinoColors.destructiveRed,
   fontWeight: FontWeight.w400,
   fontSize: 18.0,
 );
 
 final formFieldDecoration = BoxDecoration(
-  color: Colors.white,
+  color: CupertinoColors.white,
   borderRadius: BorderRadius.circular(30),
 );
 
