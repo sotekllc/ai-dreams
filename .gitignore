@@ -23,7 +23,7 @@ migrate_working_dir/
 # is commented out by default.
 #.vscode/
 
-**/*.env
+**/*.env.*
 
 # Flutter/Dart/Pub related
 *.jks
