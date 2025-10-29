@@ -4,6 +4,8 @@ A  Flutter project that allows for the (mobile) generation of StableDiffusion im
 
 # Overview
 
+High-level architecture decisions are recorded as [Architecture Decision Records]() under the `adr/` folder.
+
 # Developmnt
 
 # Architecture
