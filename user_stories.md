@@ -15,6 +15,10 @@ Organize user stories with labels to help you quickly identify their purpose and
     When there is an error loading an avertisement or an image, or no network is detected, a popup alert describes the error and allows users to retry the generation or cancel.
         If no network is detected, users are alerted and redirected back to the main predictions screen.
         If retrying only the image generation, the generation is retried and a loading screen shown with no (duplicate) advertisement.
+    Users can save a recently generated image to their local device.
+    Users can select 'redo' to retry generating an image with the same prompt as the previous image.
+    Users can select 'edit prompt' to go back to the generation screen with the prompt in the prompt field for editing.
+    Users can select 'cancel' to go back to the generations screen with no prompt in the prompt field.
 - Settings Screen
     Users can view their account type in the Application section of the Settings Screen.
         Free (Ads), Pro (Subscription)
