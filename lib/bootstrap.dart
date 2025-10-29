@@ -5,11 +5,15 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
  * Service for bootstrapping the application including
  * the loading of required environment variables.
  */
-String dotEnvFilePath = "assets/.env";
-
 class BootstrapService {
 
   static Future<void> loadEnv() async {
+    const environment = String.fromEnvironment('ENVIRONMENT', defaultValue: 'staging');
+    final dotEnvFilePath = 'assets/.env.$environment';
+    // DEBUG
+    print('Loading environment: $environment');
+    print('dotEnvFilePath = $dotEnvFilePath');
+
     await dotenv.load(
       fileName: dotEnvFilePath
     );
